@@ -1,0 +1,48 @@
+.fil_main {
+  background: #d6d6d636;
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px 30px;
+  border-radius: 20px;
+}
+
+.fil_main header input {
+  padding: 10px 25px;
+}
+
+.fil_main header label {
+  margin-right: 14px;
+}
+
+.fil_main header label:nth-child(3) {
+  margin-left: 40px;
+  font-size: large;
+}
+
+.fil_main header button {
+  cursor: pointer;
+  margin-left: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  background: cadetblue;
+}
+
+.fil_main .main_body table,
+.fil_main .main_body td,
+.fil_main .main_body th {
+  padding: 7px 25px;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+.fil_main .main_body .bg-color {
+  cursor: pointer;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fil_main .main_body .bg-color:hover {
+  background: #0000001f;
+}
+/*# sourceMappingURL=Sass.css.map */
