@@ -12,14 +12,20 @@ const DateFilter = () => {
   const filter = (item) => {
     return item.year >= date.form && item.year <= date.to;
   };
+
   const newDateFun = () => {
     if (date.form !== "" && date.to !== "") {
       let filnew = users.filter(filter);
-      //   setNewDate([...filnew]);
+      console.log(filnew);
+      setNewDate([...filnew]);
     }
   };
   const resetFun = () => {
     setNewDate(users);
+    setDate({
+      form: "",
+      to: "",
+    });
   };
   const changeFun = (e) => {
     setDate({ ...date, [e.target.name]: e.target.value });
@@ -29,9 +35,21 @@ const DateFilter = () => {
       <main className="fil_main df aic fdc g-4">
         <header>
           <label htmlFor="after">Form:</label>
-          <input type="date" id="after" name="form" onChange={changeFun} />
+          <input
+            type="date"
+            id="after"
+            name="form"
+            value={date.form}
+            onChange={changeFun}
+          />
           <label htmlFor="before">To:</label>
-          <input type="date" id="before" name="to" onChange={changeFun} />
+          <input
+            type="date"
+            id="before"
+            name="to"
+            value={date.to}
+            onChange={changeFun}
+          />
           <button onClick={() => newDateFun()}>
             <img src="./img/search.svg" />
           </button>
